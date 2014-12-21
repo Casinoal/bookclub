@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click ALLOCATE add a book to a person, or click LOOKUP to see who has what" />
+
+    <Button
+        android:id="@+id/scan_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="launchScanner"
+        android:text="@string/scan" />
+
+    <Button
+        android:id="@+id/lookup_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="listing"
+        android:text="@string/lookup" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setup"
+        android:text="Setup" />
+
+</LinearLayout>

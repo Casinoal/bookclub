@@ -1,0 +1,16 @@
+attached data on outbound, originate
+
+what event for a reply email
+
+POC?
+
+connector - debugging, simulator - events fire from Alan.  without sievel instance on desktop
+explorer tool to show event.. what's required to work against?
+
+posisble 
+
+will  need verbose logging - so run in preprod?
+
+simulator vs log files
+
+ 

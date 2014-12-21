@@ -1,0 +1,15 @@
+/api/books.xml
+
+http://www.isbndb.com/api/books.xml?access_key=Q79555UD&index1=isbn&value1=9781234567897
+
+
+http://isbndb.com/api/v2/json/Q79555UD/book/9780672327568
+http://isbndb.com/api/v2/json/Q79555UD/book/9781853263057
+
+
+
+9781234567897
+
+
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory 
+		android:title="Your details"
+		android:key="first_category">
+		
+	    
+	    <EditTextPreference
+			android:key="username"
+			android:title="User Name" 
+			android:summary="Please enter your preferred username"
+			android:dialogTitle="Username"
+			android:dialogMessage="Your name"	
+			 />
+	    
+	     <EditTextPreference
+			android:key="email"
+			android:title="Email Address" 
+			android:summary="Please enter your email address"
+			android:dialogTitle="Email"
+			android:dialogMessage="Your email"	
+			 />
+	    
+		</PreferenceCategory>
+
+	<PreferenceCategory 
+		android:title="Second Category"
+		android:key="second_category">
+
+		
+	<CheckBoxPreference 
+			android:key="pdf mailshot"
+			android:summary="Enable or disable PDF booklist"
+			android:title="Enable reminder" 
+			android:defaultValue="true" />
+	
+	<EditTextPreference
+			android:key="Club Code"
+			android:title="Club Code" 
+			android:summary="Please enter your club code"
+			android:dialogTitle="Club Code"
+			android:dialogMessage="Your clubcode"	
+			 />
+			
+			
+		/>
+	</PreferenceCategory>
+</PreferenceScreen>
