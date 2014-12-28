@@ -27,7 +27,7 @@ public class Listing extends Activity {
 	
 	 public void onCreate(Bundle savedInstanceState) {
  		super.onCreate(savedInstanceState);
- 		setContentView(R.layout.listing);
+ 		setContentView(R.layout.listing_new);
 	
  		getData();
  		
