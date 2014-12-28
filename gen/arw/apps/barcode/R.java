@@ -25,28 +25,66 @@ public final class R {
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int bookback1=0x7f020000;
-        public static final int bookback2=0x7f020001;
-        public static final int bookicon=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int apptheme_activated_background_holo_light=0x7f020000;
+        public static final int apptheme_btn_check_holo_light=0x7f020001;
+        public static final int apptheme_btn_check_off_disabled_focused_holo_light=0x7f020002;
+        public static final int apptheme_btn_check_off_disabled_holo_light=0x7f020003;
+        public static final int apptheme_btn_check_off_focused_holo_light=0x7f020004;
+        public static final int apptheme_btn_check_off_holo_light=0x7f020005;
+        public static final int apptheme_btn_check_off_pressed_holo_light=0x7f020006;
+        public static final int apptheme_btn_check_on_disabled_focused_holo_light=0x7f020007;
+        public static final int apptheme_btn_check_on_disabled_holo_light=0x7f020008;
+        public static final int apptheme_btn_check_on_focused_holo_light=0x7f020009;
+        public static final int apptheme_btn_check_on_holo_light=0x7f02000a;
+        public static final int apptheme_btn_check_on_pressed_holo_light=0x7f02000b;
+        public static final int apptheme_btn_default_disabled_focused_holo_light=0x7f02000c;
+        public static final int apptheme_btn_default_disabled_holo_light=0x7f02000d;
+        public static final int apptheme_btn_default_focused_holo_light=0x7f02000e;
+        public static final int apptheme_btn_default_holo_light=0x7f02000f;
+        public static final int apptheme_btn_default_normal_holo_light=0x7f020010;
+        public static final int apptheme_btn_default_pressed_holo_light=0x7f020011;
+        public static final int apptheme_edit_text_holo_light=0x7f020012;
+        public static final int apptheme_ic_navigation_drawer=0x7f020013;
+        public static final int apptheme_item_background_holo_light=0x7f020014;
+        public static final int apptheme_list_activated_holo=0x7f020015;
+        public static final int apptheme_list_focused_holo=0x7f020016;
+        public static final int apptheme_list_longpressed_holo=0x7f020017;
+        public static final int apptheme_list_pressed_holo_light=0x7f020018;
+        public static final int apptheme_list_selector_background_transition_holo_light=0x7f020019;
+        public static final int apptheme_list_selector_disabled_holo_light=0x7f02001a;
+        public static final int apptheme_list_selector_holo_light=0x7f02001b;
+        public static final int apptheme_text_select_handle_left=0x7f02001c;
+        public static final int apptheme_text_select_handle_middle=0x7f02001d;
+        public static final int apptheme_text_select_handle_right=0x7f02001e;
+        public static final int apptheme_textfield_activated_holo_light=0x7f02001f;
+        public static final int apptheme_textfield_default_holo_light=0x7f020020;
+        public static final int apptheme_textfield_disabled_focused_holo_light=0x7f020021;
+        public static final int apptheme_textfield_disabled_holo_light=0x7f020022;
+        public static final int apptheme_textfield_focused_holo_light=0x7f020023;
+        public static final int bookback1=0x7f020024;
+        public static final int bookback2=0x7f020025;
+        public static final int bookicon=0x7f020026;
+        public static final int ic_launcher=0x7f020027;
+        public static final int logo=0x7f020028;
     }
     public static final class id {
         public static final int TextView01=0x7f0a0008;
-        public static final int action_settings=0x7f0a0010;
+        public static final int action_settings=0x7f0a0011;
         public static final int booklist=0x7f0a0003;
         public static final int button1=0x7f0a0004;
-        public static final int button2=0x7f0a000c;
-        public static final int button3=0x7f0a000d;
-        public static final int button4=0x7f0a000e;
-        public static final int button5=0x7f0a000f;
+        public static final int button2=0x7f0a000d;
+        public static final int button3=0x7f0a000e;
+        public static final int button4=0x7f0a000f;
+        public static final int button5=0x7f0a0010;
         public static final int desciption=0x7f0a0002;
-        public static final int description_label=0x7f0a000b;
+        public static final int description_label=0x7f0a000c;
+        public static final int imageView1=0x7f0a0005;
         public static final int lookup_btn=0x7f0a0007;
         public static final int name=0x7f0a0001;
-        public static final int name_label=0x7f0a000a;
+        public static final int name_label=0x7f0a000b;
         public static final int scan_btn=0x7f0a0006;
-        public static final int settings_text_view=0x7f0a0009;
-        public static final int textView1=0x7f0a0005;
+        public static final int settings_text_view=0x7f0a000a;
+        public static final int textView1=0x7f0a0009;
         public static final int webView1=0x7f0a0000;
     }
     public static final class layout {
@@ -110,6 +148,11 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
+        public static final int AutoCompleteTextViewAppTheme=0x7f080003;
+        public static final int ButtonAppTheme=0x7f080005;
+        public static final int CheckBoxAppTheme=0x7f080004;
+        public static final int EditTextAppTheme=0x7f080002;
+        public static final int ImageButtonAppTheme=0x7f080006;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;

@@ -8,7 +8,7 @@
     <string name="scan_only_qr_codes">scan_only_qr_codes</string>
     <string name="title_activity_result">ResultActivity</string>
     <string name="title_activity_xmlparser">XMLparser</string>
-    <string name="scan">Allocate</string>
+    <string name="scan">Scan and Allocate a Book</string>
     <string name="title_activity_listing">Listing</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="title_activity_prefs">Prefs</string>

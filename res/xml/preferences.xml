@@ -13,29 +13,31 @@
 			android:summary="Please enter your preferred username"
 			android:dialogTitle="Username"
 			android:dialogMessage="Your name"	
+			android:hint="username"
 			 />
 	    
 	     <EditTextPreference
 			android:key="email"
 			android:title="Email Address" 
 			android:summary="Please enter your email address"
+			android:hint="Email"
 			android:dialogTitle="Email"
-			android:dialogMessage="Your email"	
-			 />
+			android:dialogMessage="Your email"	/>
+			
+			<CheckBoxPreference 
+			android:key="pdf mailshot"
+			android:summary="Enable or disable PDF booklist"
+			android:title="Enable reminder" 
+			android:defaultValue="true"/>
+			 
 	    
 		</PreferenceCategory>
 
 	<PreferenceCategory 
-		android:title="Second Category"
+		android:title="BookClub Details"
 		android:key="second_category">
 
-		
-	<CheckBoxPreference 
-			android:key="pdf mailshot"
-			android:summary="Enable or disable PDF booklist"
-			android:title="Enable reminder" 
-			android:defaultValue="true" />
-	
+			
 	<EditTextPreference
 			android:key="Club Code"
 			android:title="Club Code" 

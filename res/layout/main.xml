@@ -6,14 +6,15 @@
     android:orientation="vertical"
     android:padding="5dp" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Click ALLOCATE add a book to a person, or click LOOKUP to see who has what" />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/scan_btn"
+        style="@style/ButtonAppTheme"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="launchScanner"
@@ -21,6 +22,7 @@
 
     <Button
         android:id="@+id/lookup_btn"
+        style="@style/ButtonAppTheme"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="listing"
@@ -28,6 +30,7 @@
 
     <Button
         android:id="@+id/button1"
+        style="@style/ButtonAppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setup"
