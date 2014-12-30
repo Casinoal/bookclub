@@ -11,16 +11,8 @@
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The book you just scanned:"
+        android:text="The book you just scanned. If this is right, click name to scan.  If not click back to return to scanner"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/button1"
-        style="@style/ButtonAppTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="back"
-        android:text="Back" />
 
     <ListView
         android:id="@android:id/list"
@@ -30,11 +22,14 @@
 
     </ListView>
 
-    <TextView
-        android:id="@+id/textView1"
+    
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/ButtonAppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click to allocate"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:onClick="back"
+        android:text="Back" />
 
 </LinearLayout>

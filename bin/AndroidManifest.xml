@@ -61,6 +61,10 @@
             android:label="@string/title_activity_prefs" >
         </activity>
         <activity
+            android:name="arw.apps.barcode.AndroidListClient"
+            android:label="@string/title_activity_result" >
+        </activity>
+        <activity
             android:name="arw.apps.barcode.Lookup"
             android:label="@string/title_activity_intent" >
         </activity>

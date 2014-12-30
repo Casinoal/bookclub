@@ -29,9 +29,11 @@ $selected = mysql_select_db("alexwhya_bookclub",$dbhandle)
 
 <?php
 $myname = ($_POST['username']); // $foo = bar
+$clubcode = ($_POST['clubcode']); // $foo = bar
 //$myname = "Alex";
+//$clubcode = "4321";
 //execute the SQL query and return records
-$result = mysql_query("SELECT * FROM lending WHERE username='".($myname)."'");
+$result = mysql_query("SELECT * FROM lending WHERE username='".($myname)."' AND clubcode='".($clubcode)."'");
 
 //fetch the data from the database 
 
@@ -43,6 +45,8 @@ while ($row = mysql_fetch_array($result))
  <td> <?php echo $row['lenddate'];?></td>
  <td> <?php echo $row['bookname'];?></td>
  <td> <?php echo $row['username'];?></td>
+  <td> <?php echo $row['clubcode'];?></td>
+ 
  
  </tr>
  

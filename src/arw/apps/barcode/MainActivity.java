@@ -15,6 +15,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.AndroidCharacter;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -95,9 +96,17 @@ public class MainActivity extends Activity implements OnClickListener {
 		 Intent launchsetup= new Intent(getApplicationContext(), QuickPrefsActivity.class);                               
     	 startActivity(launchsetup);
 	 
-    
 	 }
+    	 
 	       
+	 public void getusers (View view) { 
+		 Intent getusers= new Intent(getApplicationContext(), AndroidListClient.class);                               
+  	 startActivity(getusers);
+  	 
+	 
+	 }
+
+	 
 	private class RequestTask extends AsyncTask<String, String, String>{
 
 	    @Override

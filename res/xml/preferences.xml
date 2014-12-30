@@ -39,7 +39,7 @@
 
 			
 	<EditTextPreference
-			android:key="Club Code"
+			android:key="clubcode"
 			android:title="Club Code" 
 			android:summary="Please enter your club code"
 			android:dialogTitle="Club Code"

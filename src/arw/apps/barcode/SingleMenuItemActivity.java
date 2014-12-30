@@ -15,8 +15,10 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -27,6 +29,7 @@ import android.widget.Toast;
 public class SingleMenuItemActivity  extends Activity implements OnClickListener {
 
 	private static final String URL = null;
+	
 
 	Button button1, button2, button3, button4, button5;
 	
@@ -37,6 +40,8 @@ public class SingleMenuItemActivity  extends Activity implements OnClickListener
 	String var_two;
 	String buttonText;
 	String name;
+	String clubcode;
+	String username;
 	
 	
 	@Override
@@ -60,17 +65,19 @@ public class SingleMenuItemActivity  extends Activity implements OnClickListener
     
 
 
-	Button button1 = (Button) findViewById(R.id.button1);
-	button1.setOnClickListener(this); 
-	Button button2 = (Button) findViewById(R.id.button2);
-	button2.setOnClickListener(this); 
-	Button button3 = (Button) findViewById(R.id.button3);
-	button3.setOnClickListener(this); 
-	Button button4 = (Button) findViewById(R.id.button4);
-	button4.setOnClickListener(this); 
-	Button button5 = (Button) findViewById(R.id.button5);
-	button5.setOnClickListener(this);
+	//Button button1 = (Button) findViewById(R.id.button1);
+	//button1.setOnClickListener(this); 
+	//Button button2 = (Button) findViewById(R.id.button2);
+	//button2.setOnClickListener(this); 
+	//Button button3 = (Button) findViewById(R.id.button3);
+	//button3.setOnClickListener(this); 
+	//Button button4 = (Button) findViewById(R.id.button4);
+	//button4.setOnClickListener(this); 
+	//Button button5 = (Button) findViewById(R.id.button5);
+	//button5.setOnClickListener(this);
 	}
+	
+	
 	
 	@Override
 	public void onClick(View v) {
@@ -79,7 +86,14 @@ public class SingleMenuItemActivity  extends Activity implements OnClickListener
 		Button b = (Button)v;
         buttonText = b.getText().toString();
         Toast.makeText(getBaseContext(), buttonText , Toast.LENGTH_SHORT).show();
-       
+        
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+    	clubcode = sharedPrefs.getString("clubcode", null);
+    	username = sharedPrefs.getString("username", null);
+        Toast.makeText(this, clubcode , Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, username , Toast.LENGTH_SHORT).show();
+            
+        
         new postData().execute();
     }
 			
@@ -92,11 +106,14 @@ public class SingleMenuItemActivity  extends Activity implements OnClickListener
 	    HttpClient httpclient = new DefaultHttpClient();
 	    HttpPost httppost = new HttpPost("http://alexwhyatt.com/bookclub_api.php");{
 
+	        	
+	    	
 	    try {
 	        // Add your data
-	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(3);
 	        nameValuePairs.add(new BasicNameValuePair("bookname", name));
 	        nameValuePairs.add(new BasicNameValuePair("username", buttonText));
+	        nameValuePairs.add(new BasicNameValuePair("clubcode", clubcode));
 	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
 	        // Execute HTTP Post Request

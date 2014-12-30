@@ -12,9 +12,9 @@ echo "Connected to MySQL<br>";
 $selected = mysql_select_db("alexwhya_bookclub",$dbhandle) 
   or die("Could not select examples");
 
-$sql="INSERT INTO lending (bookname, username, lenddate, clubcode)
+$sql="INSERT INTO lending (bookname, username, lenddate)
 VALUES
-('$_POST[bookname]','$_POST[username]''$_POST[clubcode]',curdate())";
+('$_POST[bookname]','$_POST[username]',curdate())";
  
 if (!mysql_query($sql,$dbhandle))
   {
