@@ -1,0 +1,32 @@
+main activity
+(front page with buttons:
+
+- lookup-> lookup.java (webview)
+-setting ->QickuPrefsActiveit (prefs view)
+- scan ->  
+
+
+AndroundXMLParsing Activity
+(look up to ISBN)
+
+back - finish
+
+on click the list item -> Android Client list
+(pusing name as var_one)
+displays book; 
+
+uses getlistofusers to get the users
+uses on-click to trigger saving to DB
+
+
+
+
+to do -
+
+check for settings completion
+check for internet connection
+manual ISBN box
+book return routine
+update prefs for PDF sending
+sign up clubcode
+username listing to have a margin

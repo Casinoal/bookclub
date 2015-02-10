@@ -3,45 +3,36 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" >
 
-    <TextView
-      android:id="@+id/name_label"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:paddingBottom="10dip"
-      android:paddingTop="10dip"
-      android:textColor="#dc6800"
-      android:textSize="25sp"
-      android:textStyle="bold" />
+<TextView
+    android:id="@+id/name_label"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#dc6800"
+    android:textSize="25sp"
+    android:textStyle="bold" />
+<TextView
+    android:id="@+id/description_label"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#acacac" />
+<TextView
+    android:id="@+id/userlist"
+    android:layout_width="150dp"
+    android:layout_height="20dp"
+    android:layout_below="@+id/name_label"
+    android:textColor="#ff0000"
+    android:textSize="20sp" 
+    android:padding="10dp"/>
 
-  <TextView
-      android:id="@+id/description_label"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:textColor="#acacac" />
-  
-  <TextView
-      android:id="@+id/textView1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="To allocate the book to a bookclubber, click on a name below" 
-      android:layout_below="@+id/name_label"/>
-    
-    
-    <TextView
-      android:id="@+id/userlist"
-      android:layout_width="150dp"
-      android:layout_height="20dp"
-      android:layout_below="@id/textView1"
-       />
-    
-   
-         <ListView
-             android:id="@android:id/list"
-              android:layout_height="wrap_content"
-              android:layout_width="match_parent">
-         </ListView>
-    
 
- 
-  
-  </RelativeLayout>
+<ListView
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="50dp"
+     />
+
+
+</RelativeLayout>

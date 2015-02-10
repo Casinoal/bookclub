@@ -14,7 +14,7 @@ $selected = mysql_select_db("alexwhya_bookclub",$dbhandle)
 
 $sql="INSERT INTO lending (bookname, username, lenddate, clubcode)
 VALUES
-('$_POST[bookname]','$_POST[username]''$_POST[clubcode]',curdate())";
+('$_POST[bookname]','$_POST[username]',curdate(),'$_POST[clubcode]')";
  
 if (!mysql_query($sql,$dbhandle))
   {

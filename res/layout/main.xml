@@ -4,6 +4,7 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/library"
     android:padding="5dp" >
 
     <ImageView
@@ -31,7 +32,7 @@
     <Button
         android:id="@+id/button1"
         style="@style/ButtonAppTheme"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="setup"
         android:text="Setup" />
@@ -41,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="getusers"
+        android:layout_marginTop="200dp"
         android:text="users" />
 
 </LinearLayout>

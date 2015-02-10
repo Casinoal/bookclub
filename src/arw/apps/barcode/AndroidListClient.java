@@ -22,8 +22,11 @@ import org.apache.http.message.BasicNameValuePair;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -71,7 +74,9 @@ public class AndroidListClient extends ListActivity implements OnClickListener{
                 
                 setContentView(R.layout.single_list_item);
                 
-                
+                //get clubcode
+                SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        		clubcode = sharedPrefs.getString("clubcode", null);
                 
                 // getting intent data
                 Intent in = getIntent();
@@ -109,13 +114,29 @@ public class AndroidListClient extends ListActivity implements OnClickListener{
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 
-                         
-                    
+                        	// getting values from selected ListItem
+            				username = ((TextView) view.findViewById(R.id.userlist)).getText().toString();
+            				
+            				 new postData().execute(name, username, clubcode);
+                        	
+            				 Toast.makeText(getApplicationContext(), "Book added", Toast.LENGTH_SHORT).show();
+            				 
+                        	finish();
+                                            	
+                        	
                         }
 
+
+                        
                 });
+                    
         new GetListTask().execute((Object)null);
+        
+        
+        
         }
+        
+        
         /**
          * Used to implement an asynchronous retrieval of the list from the web.
          * This uses the AsyncTask class as a starting point. For more info, see
@@ -129,7 +150,7 @@ public class AndroidListClient extends ListActivity implements OnClickListener{
                  * Let's make the http request and return the result as a String.
                  */
                 protected String doInBackground(Object... args) {                       
-                        return GetListofUsers.getAnimalList();
+                        return GetListofUsers.getUserList();
                 }
 
                 /**
@@ -170,42 +191,44 @@ public class AndroidListClient extends ListActivity implements OnClickListener{
 		
 			
 		}
-class postData extends AsyncTask<String, String, String>{
-	
-	@Override
-	protected String doInBackground(String... params) {
-	
-    // Create a new HttpClient and Post Header
-    HttpClient httpclient = new DefaultHttpClient();
-    HttpPost httppost = new HttpPost("http://alexwhyatt.com/bookclub_api.php");{
-
-        	
-    	
-    try {
-        // Add your data
-        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(3);
-        nameValuePairs.add(new BasicNameValuePair("bookname", name));
-        nameValuePairs.add(new BasicNameValuePair("username", buttonText));
-        nameValuePairs.add(new BasicNameValuePair("clubcode", clubcode));
-        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-        // Execute HTTP Post Request
-        HttpResponse response = httpclient.execute(httppost);
-
-    } catch (ClientProtocolException e) {
-        // TODO Auto-generated catch block
-    } catch (IOException e) {
-        // TODO Auto-generated catch block
-    }
-    
-    }
-	
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
-
         }
+        
+        private class postData extends AsyncTask<String, String, String>{
+        	
+        	@Override
+        	protected String doInBackground(String... params) {
+        	
+            // Create a new HttpClient and Post Header
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpPost httppost = new HttpPost("http://alexwhyatt.com/bookclub_api.php");{
+
+                	
+            	
+            try {
+                // Add your data
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(3);
+                nameValuePairs.add(new BasicNameValuePair("bookname", name));
+                nameValuePairs.add(new BasicNameValuePair("username", username));
+                nameValuePairs.add(new BasicNameValuePair("clubcode", clubcode));
+                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                // Execute HTTP Post Request
+                HttpResponse response = httpclient.execute(httppost);
+
+            } catch (ClientProtocolException e) {
+                // TODO Auto-generated catch block
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+            }
+            
+            }
+        	
+        		// TODO Auto-generated method stub
+        		return null;
+        	}
+        }
+
+        
 
 		@Override
 		public void onClick(View v) {

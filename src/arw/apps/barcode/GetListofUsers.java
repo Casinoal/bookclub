@@ -23,31 +23,17 @@ public class GetListofUsers {
          * Gets the list of animals from the server.
          * @return A string containing a comma-delimited list of animals.
          */
-        public static String getAnimalList() {
+        public static String getUserList() {
                 /*
                  * Let's construct the query string. It should be a key/value pair. In
                  * this case, we just need to specify the command, so no additional
                  * arguments are needed.
                  */
-                String data = "command=" + URLEncoder.encode("getAnimalList");
+                String data = "command=" + URLEncoder.encode("getUserList");
                 return executeHttpRequest(data);
         }
 
-        /**
-         * Gets the sound that the animal makes from the server.
-         * @param animal String specifying the animal.
-         * @return A string representing the sound an animal makes.
-         */
-        public static String getAnimalSound(String animal) {
-                /*
-                 * Let's construct the query string. We need the command getAnimalSound.
-                 * In addition, we need to set the animal value to specify which
-                 * animal we're talking about.
-                 */
-                String data = "command=" + URLEncoder.encode("getAnimalSound");
-                data += "&animal=" + URLEncoder.encode(animal);
-                return executeHttpRequest(data);
-        }
+        
 
         /**
          * Helper function used to communicate with the server by sending/receiving

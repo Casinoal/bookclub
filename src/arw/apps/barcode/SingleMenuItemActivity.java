@@ -63,8 +63,7 @@ public class SingleMenuItemActivity  extends Activity implements OnClickListener
         lblName.setText(name);
       //  lblDesc.setText(description);
     
-
-
+              
 	//Button button1 = (Button) findViewById(R.id.button1);
 	//button1.setOnClickListener(this); 
 	//Button button2 = (Button) findViewById(R.id.button2);

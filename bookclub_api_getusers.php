@@ -14,12 +14,12 @@ $selected = mysql_select_db("alexwhya_bookclub",$dbhandle)
 
   
   //$myname = ($_POST['username']); // $foo = bar
-$clubcode = ($_POST['clubcode']); // $foo = bar
+//$clubcode = ($_POST['clubcode']); // $foo = bar
 //$myname = "Alex";
 $clubcode = "4321";
 
 //execute the SQL query and return records
-$sql = mysql_query("SELECT DISTINCT username FROM lending WHERE clubcode='".($clubcode)."'");
+$sql = mysql_query("SELECT DISTINCT username FROM users WHERE clubcode='".($clubcode)."'");
 
 //fetch the data from the database 
  

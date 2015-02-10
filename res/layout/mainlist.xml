@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/library">
 	<!-- Main ListView 
 		 Always give id value as list(@android:id/list)
 	-->
@@ -11,6 +12,7 @@
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"
         android:text="The book you just scanned. If this is right, click name to scan.  If not click back to return to scanner"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -27,8 +29,9 @@
     <Button
         android:id="@+id/button1"
         style="@style/ButtonAppTheme"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:onClick="back"
         android:text="Back" />
 
