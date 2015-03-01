@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 
@@ -34,11 +35,16 @@ public class Lookup extends Activity {
 		WebView myWebView = (WebView) findViewById(R.id.webView1);
 		myWebView.postUrl(url,EncodingUtils.getBytes(postData, "BASE64"));
 
-		Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
-		Toast.makeText(this, clubcode, Toast.LENGTH_SHORT).show();
-		Toast.makeText(this, postData, Toast.LENGTH_SHORT).show();
+	//	Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+	//	Toast.makeText(this, clubcode, Toast.LENGTH_SHORT).show();
+	//	Toast.makeText(this, postData, Toast.LENGTH_SHORT).show();
 
 
 	}
+	public void back(View view) {   
+		
+		 finish();
+		
+	 }
 }
 

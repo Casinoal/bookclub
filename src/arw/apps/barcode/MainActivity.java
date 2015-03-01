@@ -101,7 +101,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	       
 	 public void getusers (View view) { 
 		 Intent getusers= new Intent(getApplicationContext(), AndroidListClient.class);                               
-  	 startActivity(getusers);
+		 startActivity(getusers);
   	 
 	 
 	 }

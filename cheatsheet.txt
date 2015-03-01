@@ -2,7 +2,7 @@ main activity
 (front page with buttons:
 
 - lookup-> lookup.java (webview)
--setting ->QickuPrefsActiveit (prefs view)
+-setting ->QuickPrefsActiveit (prefs view)
 - scan ->  
 
 
@@ -29,4 +29,4 @@ manual ISBN box
 book return routine
 update prefs for PDF sending
 sign up clubcode
-username listing to have a margin
+
